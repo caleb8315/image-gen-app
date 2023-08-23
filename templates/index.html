@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Editor</title>
+</head>
+<body>
+    <h1>Image Editor</h1>
+    <form action="/process_image" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <br>
+        <input type="radio" name="prompt" value="take this image and turn them into a cowboy. I want them to be wearing a classic cowboy outfit, with a hat, boots, jeans, and a button-down shirt. I also want them to have a gun holstered on their hip. The background of the image should be a desert landscape.">Turn me into a cowboy<br>
+        <input type="radio" name="prompt" value="Colorize this image">Colorize this image<br>
+        <input type="radio" name="prompt" value="take this image and turn them into a dinosaur. I want them to be a Tyrannosaurus Rex, with a large head, sharp teeth, and a long tail. The background of the image should be a forest landscape.">Turn me into a dinosaur<br>
+        <br>
+        <input type="submit" value="Submit">
+      </form>
+    {% if output_url %}
+    <h2>Output Image:</h2>
+    <img src="{{ output_url }}" alt="Output Image">
+    {% endif %}
+</body>
+</html>
+

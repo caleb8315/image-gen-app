@@ -1,0 +1,10 @@
+1 downloaded the imports 
+
+
+
+pip install flask
+pip install requests
+( if these dont work use python 3.9, 3.10)
+
+2 run the python code to activate the environment then open the URL the terminal gives you. 
+
